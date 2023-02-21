@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AdminWorkComponent } from './admin-work/admin-work.component';
@@ -27,7 +27,7 @@ const allLinks:Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,RouterModule.forRoot(allLinks),
-    FormsModule
+    FormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

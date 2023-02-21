@@ -1,16 +1,33 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Restaurant } from './restaurant';
+import { RestaurantDto } from './restaurant-dto';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RestaurantOperationService {
   
-
-  constructor() { }
-
+  baseURL:string = 'http://localhost:2003';
+  restaurantByCityEndPoint:string=this.baseURL+'/restaurant/city';
+//localhost:2003/restaurant/city/pune
 
   restaurantArr:Restaurant[]=[];
+  constructor(private http:HttpClient) { 
+    
+    console.log("Inside Constructor "+this.restaurantByCityEndPoint);
+  }
+
+  getRestaurantDetailsByCity(city:string):Observable<RestaurantDto[]>{
+    console.log("Inside Method 1 "+this.restaurantByCityEndPoint);
+    this.restaurantByCityEndPoint=this.restaurantByCityEndPoint+'/'+city;
+    console.log("After adding city 2 "+this.restaurantByCityEndPoint);
+
+    return this.http.get<RestaurantDto[]>(`${this.restaurantByCityEndPoint}`);
+  }
+
+ 
 
   addRestaurants(restaurantFromUser:Restaurant){
     this.restaurantArr.push(restaurantFromUser); 

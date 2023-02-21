@@ -1,0 +1,63 @@
+<p>Food App</p>
+<div >
+    <table>
+        <tr>
+            
+           
+            
+            <td>
+                Filter Restaurant 
+                restaurantCity
+                
+                    <select #city (change)="getFilterCity(city.value)">
+                        <option> Hyderabad</option>
+                        <option> Mumbai </option>
+                        <option> Bangalore </option>
+                        <option> Chennai </option>
+                    </select>
+                   
+            
+            </td>
+            <td>
+                Filter Restaurant 
+                restaurantState
+                
+                    <select #state (change)="getFilterState(state.value)">
+                        <option> Telangana</option>
+                        <option> Maharastra </option>
+                        <option> Karnataka </option>
+                        <option> Tamil Nadu </option>
+                    </select>
+                   
+            
+            </td>
+            
+        </tr>
+    </table>
+   
+    <div *ngFor="let r of allRestaurants" style="background-color:rgb(244, 166, 138);">
+        <table>
+            <tr>
+                <td> <img src="/assets/images/{{r.imageName}}" alt=" Restaurant image" width="150px" height="150px">
+                </td>
+                <td>
+                    <h2>{{r.restaurantName}} </h2>
+                    <hr />
+                    <p> {{r.managerName}} </p>
+                    <br>
+                    <p>{{r.city}} ,{{r.buildingName}} ,{{r.area}} ,{{r.streetNo}} ,{{r.state}} ,{{r.country}} ,{{r.pincode}}</p>
+                </td>
+            </tr>
+            <hr>
+        </table>
+    </div>
+    
+
+
+</div>
+
+
+
+
+
+            

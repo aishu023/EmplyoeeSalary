@@ -1,0 +1,69 @@
+
+<table  style="background-color:rgb(246, 125, 82);">
+    <tr>
+        <td> Enter  Restaurant Name </td>
+        <td> <input type="text" #resName/> </td>
+    </tr>
+    <tr>
+        <td> Restaurant Manager </td>
+        <td> <input type="text" #manager/> </td>
+    </tr>
+    <tr>
+        <td> Contact Number </td>
+        <td> <input type="text" #contnumber/> </td>
+    </tr>
+    <tr>
+        <td>BuildingName</td>
+        <td> <input type="text" #buildingName/> </td>
+    </tr>
+    <tr>
+        <td> area </td>
+        <td> <input type="text" #area/> </td>
+    </tr>
+    <tr>
+        <td> Street number </td>
+        <td> <input type="text" #streetno/> </td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td> 
+            <select #city>
+                <option> Hyderabad</option>
+                <option> Mumbai</option>
+                <option> Bangalore </option>
+                <option> Chennai </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>State</td>
+        <td> 
+            <select #state>
+                <option> Telangana </option>
+                <option> Maharastra </option>
+                <option> Karnataka </option>
+                <option> Tamil Nadu </option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>Country</td>
+        <td> <input type="text" #country/> </td>
+    </tr>
+    <tr>
+        <td>Pincode</td>
+        <td> <input type="text" #pincode/> </td>
+    </tr>
+    <tr>
+        <td> Image Name </td>
+        <td> <input type="text" #image/> </td>
+    </tr>
+   
+    <tr>
+        <td> <input type="reset" value="Clear All"></td>
+        <td> <input type="button" 
+            (click)=" readRestaurants(resName.value,manager.value,contnumber.value,buildingName.value,area.value,streetno.value,city.value,state.value,country.value,pincode.value,image.value)"
+            value="Add Restaurant" /> </td>
+    </tr>  
+</table>
+<br/>

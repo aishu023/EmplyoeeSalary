@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 public static List<String> matchingBraces(List<String> braces) {
     List<String> result = new ArrayList<>();

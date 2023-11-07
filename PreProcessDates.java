@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 public static List<String> preprocessDate(List<String> dates) {
     List<String> ans = new ArrayList<>();

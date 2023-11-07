@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 class Result {
     public static List<Integer> findSubsequence(List<Integer> arr) {

@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 import java.util.ArrayList;
 import java.util.List;

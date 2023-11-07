@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 import java.io.*;
 import java.util.*;

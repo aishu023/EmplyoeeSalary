@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 class LineList {
     private Vector<Line> list_of_lines;

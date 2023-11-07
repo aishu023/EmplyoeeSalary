@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 public static List<String> attributesSet(int numberOfAttributes, float supportThreshold) {
     Map<String, Integer> attributeCounts = new HashMap<>();

@@ -18,12 +18,12 @@ class Result {
             if (pos2 - pos1 > 1) {
                 int minHeight = Math.min(h1, h2);
                 int maxHeightPossible = Math.max(h1, h2);
-                int distance = pos2 - pos1;
+                int distance = pos2 - pos1 - 1;
 
-                if (maxHeightPossible - minHeight <= distance) {
-                    maxHeight = Math.max(maxHeight, minHeight + distance - 1);
+                if (maxHeightPossible - minHeight >= distance) {
+                    maxHeight = Math.max(maxHeight, minHeight + distance);
                 } else {
-                    int currMax = Math.min(maxHeightPossible, minHeight) + distance - 1;
+                    int currMax = Math.min(maxHeightPossible, minHeight) + distance;
                     maxHeight = Math.max(maxHeight, currMax);
                 }
             }

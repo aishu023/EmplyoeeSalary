@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 public static int numPaths(List<List<Integer>> warehouse) {
     int n = warehouse.size();

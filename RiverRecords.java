@@ -1,34 +1,23 @@
-package com.cg.havherrank;
+import java.util.List;
 
 class Result {
+    public static int maxTrailing(List<Integer> arr) {
+        if (arr.size() < 2) {
+            return -1;
+        }
 
-    /*
-     * Complete the 'maxTrailing' function below.
-     *
-     * The function is expected to return an INTEGER.
-     * The function accepts INTEGER_ARRAY arr as parameter.
-     */
+        int maxDiff = -1;
+        int minSoFar = arr.get(0);
 
-   public static int maxTrailing(List<Integer> arr) {
-    int n = arr.size();
-    int maxDiff = -1;
-    int minVal = arr.get(0);
-
-    for (int i = 1; i < n; i++) {
-        if (arr.get(i) < minVal) {
-            minVal = arr.get(i);
-        } else {
-            int diff = arr.get(i) - minVal;
-            if (diff > maxDiff) {
-                maxDiff = diff;
+        for (int i = 1; i < arr.size(); i++) {
+            int current = arr.get(i);
+            if (current > minSoFar) {
+                maxDiff = Math.max(maxDiff, current - minSoFar);
+            } else {
+                minSoFar = current;
             }
         }
+
+        return maxDiff;
     }
-
-    return maxDiff >= 0 ? maxDiff : -1;
 }
-
-
-}
-
-

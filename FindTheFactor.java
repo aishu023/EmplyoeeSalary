@@ -1,4 +1,15 @@
+class Result {
 
+    /*
+     * Complete the 'pthFactor' function below.
+     *
+     * The function is expected to return a LONG_INTEGER.
+     * The function accepts following parameters:
+     *  1. LONG_INTEGER n
+     *  2. LONG_INTEGER p
+     */
+
+   
 public static long pthFactor(long n, long p) {
     List<Long> factors = new ArrayList<>();
     
@@ -21,4 +32,8 @@ public static long pthFactor(long n, long p) {
 }
 
 
+
+
+
+}
 

@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 class Result {
     public static int getMinTime(List<Integer> task_memory, List<Integer> task_type, int max_memory) {

@@ -1,3 +1,11 @@
+class Result {
+
+    /*
+     * Complete the 'fourthBit' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts INTEGER number as parameter.
+     */
 
     public static int fourthBit(int number) {
         
@@ -19,4 +27,8 @@
     }
 
 
+
+
+
+}
 

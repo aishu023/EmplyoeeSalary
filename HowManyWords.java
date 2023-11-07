@@ -1,4 +1,13 @@
+class Result {
 
+    /*
+     * Complete the 'howMany' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts STRING sentence as parameter.
+     */
+
+    
 public static int howMany(String sentence) {
     int i = 0;
     int ans = 0;
@@ -31,3 +40,7 @@ public static int howMany(String sentence) {
     }
     return ans;
 }
+
+
+}
+

@@ -1,38 +1,17 @@
-package com.cg.havherrank;
-
-import java.util.List;
-import java.util.ArrayList;
-
 class Result {
-
-    public static int getMinIterations(List<Integer> arr) {
-        int n = arr.size();
-        List<Integer> lis = new ArrayList<>();
-
-        for (int i = 0; i < n; i++) {
-            int it = binarySearchRight(lis, arr.get(i));
-            if (it == lis.size()) {
-                lis.add(arr.get(i));
-            } else {
-                lis.set(it, arr.get(i));
+    public static int getMinDeletions(String s) {
+        int[] freq = new int[26];
+        // get the frequency per character
+        for (int i = 0; i < s.length(); i++) {
+            freq[s.charAt(i) - 'a']++;
+        }
+        int cnt = s.length();
+        // reduce by 1 for each character that occurs
+        for (int i = 0; i < 26; i++) {
+            if (freq[i] > 0) {
+                cnt--;
             }
         }
-
-        return (n - lis.size() + 1) / 2;
-    }
-
-    private static int binarySearchRight(List<Integer> lis, int target) {
-        int left = 0;
-        int right = lis.size();
-
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-            if (lis.get(mid) <= target) {
-                left = mid + 1;
-            } else {
-                right = mid;
-            }
-        }
-        return left;
+        return cnt;
     }
 }

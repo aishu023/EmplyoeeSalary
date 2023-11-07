@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 public static List<Integer> subsetA(List<Integer> arr) {
     // sort descending

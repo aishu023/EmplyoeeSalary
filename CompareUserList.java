@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 class UserManager {
     public static List<User>[] compareUsers(List<User> usersListInDB, List<User> newUsersList) {

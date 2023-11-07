@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 class Adder extends Calculator {
     @Override

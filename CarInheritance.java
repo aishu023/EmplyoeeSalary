@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 class WagonR extends Car {
     private int mileage;

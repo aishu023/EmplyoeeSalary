@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 class Result {
     public static SinglyLinkedListNode condense(SinglyLinkedListNode head) {

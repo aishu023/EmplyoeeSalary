@@ -1,4 +1,3 @@
-package com.cg.havherrank;
 
 private static int isPresent(Node root, int val) {
     /* For your reference
